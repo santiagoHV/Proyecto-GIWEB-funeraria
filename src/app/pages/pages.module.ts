@@ -2,16 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
-import { HomeComponent } from './home/home.component';
-import { RegistroComponent } from './registro/registro.component';
-import { RegistradosComponent } from './registrados/registrados.component';
+import { ComponentsModule } from '../components/components.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [HomeComponent, RegistroComponent, RegistradosComponent],
+  declarations: [],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    ComponentsModule,
+    PagesRoutingModule,
+    FormsModule
   ]
 })
 export class PagesModule { }
