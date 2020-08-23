@@ -7,7 +7,7 @@ const routes: Routes = [
     path: 'gestor-funeraria', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
   },
   {
-    path: '', pathMatch: 'full', redirectTo: 'gestor-funeraria'
+    path: '', pathMatch: 'full', redirectTo: 'gestor-funeraria/data'
   }
 ];
 

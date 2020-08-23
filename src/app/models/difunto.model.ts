@@ -6,4 +6,5 @@ export class DifuntoModel{
     representante: string;
     contacto: string;
     seguro: string;
+    muerte: string;
 }

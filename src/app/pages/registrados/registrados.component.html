@@ -8,7 +8,9 @@
                         <th scope="col">#</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
-                        <th scope="col">Tools</th>
+                        <th scope="col">Religion</th>
+                        <th scope="col">Causa de muerte</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -16,6 +18,8 @@
                         <th scope="row">{{i+1}}</th>
                         <td>{{item.nombre}}</td>
                         <td>{{item.apellido}}</td>
+                        <td>{{item.religion}}</td>
+                        <td>{{item.muerte}}</td>
                         <td><button class="btn btn-light" [routerLink]="['/gestor-funeraria/registro/'+item.id_difunto]">Editar</button></td>
                     </tr>
 

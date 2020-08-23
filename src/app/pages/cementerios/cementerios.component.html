@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="card bg-dark text-white" *ngFor="let item of cementerios">
+        <img [src]="item.url_img" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <h5 class="card-title">{{item.nombre}}</h5>
+            <p class="card-text">{{item.ubicacion}}</p>
+        </div>
+    </div>
+</div>

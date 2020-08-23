@@ -8,13 +8,15 @@ import { RegistradosComponent } from './registrados/registrados.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { PagesRoutingModule } from './pages-routing.module';
+import { CementeriosComponent } from './cementerios/cementerios.component';
 
 
 @NgModule({
   declarations: [
     RegistroComponent,
     RegistradosComponent,
-    HomeComponent
+    HomeComponent,
+    CementeriosComponent
   ],
   imports: [
     CommonModule,
