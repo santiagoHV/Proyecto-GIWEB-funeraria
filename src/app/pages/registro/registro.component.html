@@ -1,4 +1,4 @@
-<div class="mt-4">
+<div class="container mt-4">
     <h1 class="display-4" *ngIf="id == 'new'">Nuevo Usuario</h1>
     <h1 class="display-4" *ngIf="id != 'new'">Actualizar Usuario</h1>
     <hr>
@@ -8,37 +8,37 @@
     <form (ngSubmit)="guardar(userform)" #userform="ngForm">
         <div class="row">
 
-            <div class="col">
+            <div class="col-6">
                 <div class="form-row">
                     <label>Nombre:</label>
                     <input class="form-control" [(ngModel)]="difunto.nombre" name="nombre" required>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-6">
                 <div class="form-row">
                     <label>Apellido:</label>
                     <input class="form-control" [(ngModel)]="difunto.apellido" name="apellido" required>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-6">
                 <div class="form-row">
                     <label>Religion:</label>
                     <input class="form-control" [(ngModel)]="difunto.religion" name="religion">
                 </div>
             </div>
-            <div class="col">
+            <div class="col-6">
                 <div class="form-row">
                     <label>Seguro de vida:</label>
                     <input class="form-control" [(ngModel)]="difunto.seguro" name="seguro">
                 </div>
             </div>
-            <div class="col">
+            <div class="col-6">
                 <div class="form-row">
                     <label>Representante familiar:</label>
                     <input class="form-control" [(ngModel)]="difunto.representante" name="representante">
                 </div>
             </div>
-            <div class="col">
+            <div class="col-6">
                 <div class="form-row">
                     <label>Numero de contacto del:</label>
                     <input class="form-control" [(ngModel)]="difunto.contacto" name="representante">

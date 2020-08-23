@@ -1,1 +1,26 @@
-<p>registrados works!</p>
+<div class="container">
+    <h1 class="display-4">Lista de usuarios</h1>
+    <div class="row">
+        <div class="col">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Tools</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of difunto; let i = index">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.apellido}}</td>
+                        <td><button class="btn btn-light" [routerLink]="['/gestor-funeraria/registro/'+item.id_difunto]">Editar</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

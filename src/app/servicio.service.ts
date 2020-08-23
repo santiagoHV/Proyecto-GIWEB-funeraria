@@ -16,13 +16,13 @@ export class ServicioService {
     return this._HttpClient.get(this.db_url + 'difuntos.json').pipe(map(this.getAllUsuariosArreglo));
   }
 
-  private getAllUsuariosArreglo(usuario: object){
+  private getAllUsuariosArreglo(difunto: object){
     const usuarios: DifuntoModel[] = [];
-    if(usuario === null){
+    if(difunto === null){
       return[];
     }
-    Object.keys(usuario).forEach(key =>{
-      const usuario2: DifuntoModel = usuario[key];
+    Object.keys(difunto).forEach(key => {
+      const usuario2: DifuntoModel = difunto[key];
       usuario2.id_difunto = key;
       usuarios.push(usuario2);
     });
@@ -33,11 +33,11 @@ export class ServicioService {
     console.log(this.db_url + 'difuntos/' + id + '.json');
     return this._HttpClient.get(this.db_url + 'difuntos/' + id + '.json');
   }
-  postUsuario(usuario : DifuntoModel){
-    return this._HttpClient.post(this.db_url + 'difuntos/.json', usuario).pipe(
+  postUsuario(difunto : DifuntoModel){
+    return this._HttpClient.post(this.db_url + 'difuntos/.json', difunto).pipe(
       map((res : any) =>{
-        usuario.id_difunto = res.name;
-        return usuario;
+        difunto.id_difunto = res.name;
+        return difunto;
       })
     );
   }
